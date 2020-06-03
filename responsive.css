@@ -1,0 +1,36 @@
+@media(max-width: 900px){
+    #page-home{
+        background-position-x: 70vw ;
+    }
+
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a{
+        position: absolute;/*como uma folha se sobrepoe a outra*/
+        bottom: 48px;
+
+        left: 50%;
+        transform: translateX(-50%);/* faz alinha no eixo x*/
+
+    }
+
+    #page-home main{
+        align-items: center;
+    }
+}
+
+@media(min-width:1700){
+    #page-home{
+        background-position-x: 40vw ;
+    }
+}
+
+@media(max-height:760){
+    #page-home{
+        background-position-y: 200px ;/*200px no lugar de bottom*/
+    }
+
+}
