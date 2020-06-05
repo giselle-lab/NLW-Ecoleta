@@ -1,61 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+<!-- n-e enter -->
+{% extends "layout.html" %}
 
-<head>	
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-widht, initial-scale=1.0">
-	<title>Resultado da pesquisa</title>
+<!-- n-set enter -->
+{% set pageId = "page-search-results" %}
 
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% block title %}
+    <title>Resultado da pesquisa</title>
+{% endblock title %}
 
-	<link rel="stylesheet" href="/style/main.css">
-	<link rel="stylesheet" href="/style/search-results.css">
-    
-    <link rel="stylesheet" href="/style/responsive.css">
-</head>
-<body>
+{% block styles %}
+    <link rel="stylesheet" href="/style/search-results.css">
+{% endblock styles %}
 
-	<div id="page-search-results">
+{% block content %}
+    {% include "partials/page-header.html"%}
 
-			<header>
-				<img src="/icones/logo.svg" alt="Logomarca">
-				<a href="index.html"> <!--/ou index.html-->
-					<span></span>
-					Voltar para home
-				</a>
-            </header>
-            
-            <main>
+    <main>
 
-                <h4>
-                    <strong>2 pontos</strong> encontrados
-                </h4>
+        <h4>
+            <strong>2 pontos</strong>
+            encontrados
+        </h4>
 
-                <div class="cards">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" alt="Colectoria">
-                        <h1>Colectoria</h1>
-                        <h3>Residuos Eletrônicos, Lâmpadas</h3>
-                        <p>
-                            Rio do Sul, Santa Cararina <br/>
-                            Guilherme Gambala, Jardim América <br/>
-                            Número 260
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1481761289552-381112059e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" alt="Paperside">
-                        <h1>Paperside</h1>
-                        <h3>Papéis e Papelão</h3>
-                        <p>
-                            Rio do Sul, Santa Cararina <br/>
-                            Guilherme Gambala, Jardim América <br/>
-                            Número 260
-                        </p>
-                    </div>
-                </div>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" alt="Colectoria">
+                <h1>Colectoria</h1>
+                <h3>Residuos Eletrônicos, Lâmpadas</h3>
+                <p>
+                    Rio do Sul, Santa Cararina
+                    <br/>
+                    Guilherme Gambala, Jardim América
+                    <br/>
+                    Número 260
+                </p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1481761289552-381112059e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60" alt="Paperside">
+                <h1>Paperside</h1>
+                <h3>Papéis e Papelão</h3>
+                <p>
+                    Rio do Sul, Santa Cararina
+                    <br/>
+                    Guilherme Gambala, Jardim América
+                    <br/>
+                    Número 260
+                </p>
+            </div>
+        </div>
 
-            </main>
-
-	</div>
-</body>
-</html>
+    </main>
+{% endblock content %}
